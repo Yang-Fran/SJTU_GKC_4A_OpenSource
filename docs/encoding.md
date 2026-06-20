@@ -9,15 +9,6 @@
 - 若只阅读代码，建议在 VS Code、Notepad++、CLion 或 Keil 中显式选择 GBK/GB2312 打开。
 - 若需要将源码统一转换为 UTF-8，应单独开一次编码迁移，并在真实工具链上重新导入、编译和下载验证。
 
-## 已复核现象
-
-以 `COSTAS/COSTASProject/costas_loop.h` 和 `TxBoard/dds_ser_main.c` 为例：
-
-- 使用 Windows 默认 ANSI/GBK 读取时，中文注释正常。
-- 使用 UTF-8 读取时，中文注释会显示为乱码。
-
-这说明当前工程编码与 Keil/Windows 中文工程习惯一致，不是构建产物或隐私问题。
-
 ## 对贡献者的建议
 
 1. 修改 Keil 工程源码前，先确认编辑器底部显示的编码为 GBK、GB2312 或系统默认 ANSI。

@@ -2,7 +2,7 @@
 
 `COSTAS/` 是接收机 Costas 环控制器固件，目标平台为 Nuvoton NUC140/NUC1xx 系列。该部分负责控制两路 AD9850 本地正交载波、采集 I/Q 两路 T 点信号、执行 T 点标定、DDS 参考时钟频率校准，以及 BPSK/QPSK 的 bang-bang 相位追踪。
 
-> 本目录源码是 Keil/Windows 中文工程风格，部分 `.c/.h` 文件使用 GB2312/GBK 编码。查看或修改源码时请在编辑器中显式选择 GBK、GB2312 或系统默认 ANSI，不要批量转换为 UTF-8。
+> 项目早期代码注释可能使用 GB2312/GBK 编码。查看或修改源码时请注意 IDE 编码设置，避免无意转换导致中文注释乱码。
 
 ## 文件结构
 
@@ -94,6 +94,3 @@ BPSK 与 QPSK 共用一套复平面相位跟踪框架：
 - 慢闪：闭环或校准正在跟踪。
 - 常亮：闭环或校准达到连续锁定条件。
 
-## 开源注意事项
-
-不要提交 `objects/`、`cmake-build-debug/`、`.idea/`、`.vscode/`、`*.map`、`*.dep`、`*.lst`、`*.bak`、`.uvgui*` 等构建产物或用户本地状态文件。`CMSIS/` 和 `Dependencies/` 中的 Nuvoton/CMSIS 文件保留其原始许可；仓库顶层 MIT License 仅覆盖项目自有代码和文档。
